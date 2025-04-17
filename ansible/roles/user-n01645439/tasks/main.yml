@@ -1,0 +1,41 @@
+---
+- name: Create group cloudadmins
+  group:
+    name: cloudadmins
+    state: present
+
+- name: Create users and add to groups
+  loop:
+    - user100
+    - user200
+    - user300
+  loop_control:
+    loop_var: user
+  user:
+    name: "{{ user }}"
+    groups: cloudadmins,wheel
+    append: yes
+    shell: /bin/bash
+    create_home: yes
+
+- name: Generate SSH key for each user
+  loop:
+    - user100
+    - user200
+    - user300
+  loop_control:
+    loop_var: user
+  become_user: "{{ user }}"
+  command: ssh-keygen -t rsa -b 2048 -f /home/{{ user }}/.ssh/id_rsa -q -N ""
+  creates: "/home/{{ user }}/.ssh/id_rsa"
+
+- name: Set correct permissions on .ssh directory
+  file:
+    path: "/home/{{ item }}/.ssh"
+    owner: "{{ item }}"
+    group: "{{ item }}"
+    mode: '0700'
+  loop:
+    - user100
+    - user200
+    - user300

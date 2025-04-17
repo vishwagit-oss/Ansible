@@ -1,0 +1,40 @@
+---
+- name: Create partitions using parted
+  parted:
+    device: /dev/sdc
+    number: "{{ item.num }}"
+    state: present
+    part_type: primary
+    fs_type: "{{ item.fstype }}"
+    start: "{{ item.start }}"
+    end: "{{ item.end }}"
+  loop:
+    - { num: 1, fstype: xfs, start: 1MiB, end: 4096MiB }
+    - { num: 2, fstype: ext4, start: 4096MiB, end: 9216MiB }
+
+- name: Make file systems
+  filesystem:
+    fstype: "{{ item.fstype }}"
+    dev: "{{ item.dev }}"
+  loop:
+    - { fstype: xfs, dev: /dev/sdc1 }
+    - { fstype: ext4, dev: /dev/sdc2 }
+
+- name: Create mount points
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - /part1
+    - /part2
+
+- name: Mount partitions
+  mount:
+    path: "{{ item.path }}"
+    src: "{{ item.src }}"
+    fstype: "{{ item.fstype }}"
+    state: mounted
+    opts: defaults
+  with_items:
+    - { path: /part1, src: /dev/sdc1, fstype: xfs }
+    - { path: /part2, src: /dev/sdc2, fstype: ext4 }

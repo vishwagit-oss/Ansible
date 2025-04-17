@@ -1,0 +1,56 @@
+
+---
+- name: Create GPT partition table on /dev/sdc
+  command: parted -s {{ datadisk_device }} mklabel gpt
+
+- name: Create 4GB partition (Partition 1)
+  parted:
+    device: "{{ datadisk_device }}"
+    number: 1
+    part_start: 1MiB
+    part_end: "{{ partition1_size_mb }}MiB"
+    state: present
+
+- name: Create 5GB partition (Partition 2)
+  parted:
+    device: "{{ datadisk_device }}"
+    number: 2
+    part_start: "{{ partition1_size_mb }}MiB"
+    part_end: "{{ partition1_size_mb + partition2_size_mb }}MiB"
+    state: present
+
+- name: Create filesystem on Partition 1 (XFS)
+  filesystem:
+    fstype: "{{ filesystem1 }}"
+    dev: "{{ datadisk_device }}1"
+
+- name: Create filesystem on Partition 2 (EXT4)
+  filesystem:
+    fstype: "{{ filesystem2 }}"
+    dev: "{{ datadisk_device }}2"
+
+- name: Create mount point for /part1
+  file:
+    path: "{{ mount1_path }}"
+    state: directory
+
+- name: Create mount point for /part2
+  file:
+    path: "{{ mount2_path }}"
+    state: directory
+
+- name: Mount /part1
+  mount:
+    path: "{{ mount1_path }}"
+    src: "{{ datadisk_device }}1"
+    fstype: "{{ filesystem1 }}"
+    opts: defaults
+    state: mounted
+
+- name: Mount /part2
+  mount:
+    path: "{{ mount2_path }}"
+    src: "{{ datadisk_device }}2"
+    fstype: "{{ filesystem2 }}"
+    opts: defaults
+    state: mounted

@@ -1,0 +1,19 @@
+---
+- name: Install Apache
+  package:
+    name: apache2
+    state: present
+
+- name: Copy FQDN HTML to index.html
+  template:
+    src: index.html.j2
+    dest: /var/www/html/index.html
+    owner: root
+    group: root
+    mode: '0444'
+  notify: Restart Apache
+
+- name: Enable Apache on boot
+  systemd:
+    name: apache2
+    enabled: yes

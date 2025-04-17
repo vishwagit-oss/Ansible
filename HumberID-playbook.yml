@@ -1,0 +1,9 @@
+---
+- name: Apply all automation roles to Linux VMs
+  hosts: linux
+  become: yes
+  roles:
+    - profile-n01645439
+    - user-n01645439
+    - datadisk-n01645439
+    - webserver-n01645439

@@ -1,0 +1,62 @@
+
+- name: Ensure all user groups exist
+  group:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ user_groups }}"
+
+- name: Ensure users exist and are part of the correct groups
+  user:
+    name: "{{ item }}"
+    groups: "{{ user_groups | join(',') }}"
+    append: yes
+    state: present
+    shell: /bin/bash
+    create_home: yes
+  loop: "{{ users }}"
+
+- name: Ensure .ssh directory exists
+  file:
+    path: "/home/{{ item }}/.ssh"
+    state: directory
+    owner: "{{ item }}"
+    group: "{{ item }}"
+    mode: '0700'
+  loop: 
+    - user100
+    - user200
+    - user300
+
+- name: Generate SSH key pair for each user (no passphrase)
+  openssh_keypair:
+    path: "/home/{{ item }}/.ssh/id_rsa"
+    type: rsa
+    size: 2048
+    owner: "{{ item }}"
+    group: "{{ item }}"
+    mode: '0600'
+    force: no
+  loop: 
+    - user100
+    - user200
+    - user300
+
+- name: Add public key to authorized_keys for each user
+  copy:
+    src: "/home/{{ item }}/.ssh/id_rsa.pub"
+    dest: "/home/{{ item }}/.ssh/authorized_keys"
+    owner: "{{ item }}"
+    group: "{{ item }}"
+    mode: '0600'
+    remote_src: yes
+  loop: "{{ users }}"
+
+- name: Download private key for user100 to control node
+  fetch:
+    src: /home/user100/.ssh/id_rsa
+    dest: ./fetched_keys/{{ inventory_hostname }}_user100_id_rsa
+    flat: yes
+    force: yes
+  tags: fetch_key
+
+

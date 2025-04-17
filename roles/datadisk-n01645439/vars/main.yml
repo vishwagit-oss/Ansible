@@ -1,0 +1,8 @@
+
+datadisk_device: /dev/sdc
+partition1_size_mb: 4096    # 4 GB
+partition2_size_mb: 5120    # 5 GB
+mount1_path: /part1
+mount2_path: /part2
+filesystem1: xfs
+filesystem2: ext4

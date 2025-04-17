@@ -1,0 +1,23 @@
+---
+- name: Install Apache based on OS
+  package:
+    name: httpd
+    state: present
+    
+- name: Copy FQDN HTML to index.html
+  copy:
+    content: "Hostname: {{ ansible_facts['nodename'] }}"
+    dest: /var/www/html/index.html
+    owner: root
+    group: root
+    mode: '0444'
+
+- name: Enable Apache on boot
+  systemd:
+    name: httpd
+    enabled: yes
+
+- name: Start Apache service
+  service:
+    name: httpd
+    state: started

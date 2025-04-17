@@ -1,0 +1,9 @@
+---
+- name: Add profile configuration block
+  blockinfile:
+    path: /etc/profile
+    block: |
+      #Test block added by Ansible……n01645439
+      export TMOUT=1500
+    create: yes
+    backup: yes
