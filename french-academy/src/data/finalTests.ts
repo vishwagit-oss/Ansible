@@ -1,0 +1,105 @@
+import type { FinalTest } from '../types';
+
+export const finalTests: FinalTest[] = [
+  {
+    id: 'a1-final',
+    levelId: 'a1',
+    title: 'Beginner (A1) Final Exam',
+    description: 'Comprehensive test covering alphabet, greetings, numbers, colors, articles, être/avoir, gender, and questions. You need 70% to pass.',
+    passingScore: 70,
+    questions: [
+      { id: 'a1-f-q1', type: 'multiple-choice', question: 'How do you say "I am hungry"?', options: ['Je suis faim', "J'ai faim", 'Je suis hungry', "J'ai hungry"], correctAnswer: "J'ai faim", explanation: 'Hunger uses avoir in French.' },
+      { id: 'a1-f-q2', type: 'multiple-choice', question: 'What is 85 in French?', options: ['huitante-cinq', 'quatre-vingt-cinq', 'soixante-vingt-cinq', 'cinquante-trente-cinq'], correctAnswer: 'quatre-vingt-cinq', explanation: '85 = quatre-vingt-cinq.' },
+      { id: 'a1-f-q3', type: 'fill-blank', question: '___ maison blanche (a white house)', correctAnswer: 'une', explanation: 'Une maison blanche — indefinite article feminine.' },
+      { id: 'a1-f-q4', type: 'multiple-choice', question: 'Correct greeting at 9 PM:', options: ['Bonjour', 'Bonsoir', 'Bonne nuit', 'Salut'], correctAnswer: 'Bonsoir', explanation: 'Bonsoir for evening greeting.' },
+      { id: 'a1-f-q5', type: 'fill-blank', question: 'Elle ___ professeure. (être)', correctAnswer: 'est', explanation: 'Elle est — être conjugation.' },
+      { id: 'a1-f-q6', type: 'multiple-choice', question: 'Nouns ending in -tion are usually:', options: ['masculine', 'feminine', 'neuter', 'variable'], correctAnswer: 'feminine', explanation: '-tion endings are typically feminine.' },
+      { id: 'a1-f-q7', type: 'translation', question: 'Write "Where do you live?" (formal):', correctAnswer: 'Où habitez-vous', explanation: 'Où habitez-vous — formal question.' },
+      { id: 'a1-f-q8', type: 'multiple-choice', question: 'de + le = ?', options: ['de le', 'du', 'des', 'au'], correctAnswer: 'du', explanation: 'de + le contracts to du.' },
+      { id: 'a1-f-q9', type: 'fill-blank', question: 'Je n\'ai pas ___ chat.', correctAnswer: 'de', explanation: 'Negative: pas de.' },
+      { id: 'a1-f-q10', type: 'multiple-choice', question: 'Age in French uses:', options: ['être', 'avoir', 'faire', 'aller'], correctAnswer: 'avoir', explanation: 'J\'ai ... ans uses avoir.' },
+      { id: 'a1-f-q11', type: 'multiple-choice', question: '"Comment allez-vous?" is:', options: ['Informal', 'Formal', 'Slang', 'Written only'], correctAnswer: 'Formal', explanation: 'Vous form = formal.' },
+      { id: 'a1-f-q12', type: 'fill-blank', question: 'des chats ___ (black, masc. plural)', correctAnswer: 'noirs', explanation: 'Noir → noirs for masculine plural.' },
+      { id: 'a1-f-q13', type: 'multiple-choice', question: 'The French R is:', options: ['Rolled with tongue', 'Uvular (back of throat)', 'Silent', 'Like English R'], correctAnswer: 'Uvular (back of throat)', explanation: 'French R is uvular.' },
+      { id: 'a1-f-q14', type: 'translation', question: 'Write "They are 20 years old":', correctAnswer: 'Ils ont vingt ans', explanation: 'Age with avoir, plural ils ont.' },
+      { id: 'a1-f-q15', type: 'multiple-choice', question: 'Est-ce que is used to:', options: ['Make statements', 'Form questions', 'Negate sentences', 'Show possession'], correctAnswer: 'Form questions', explanation: 'Est-ce que + statement = question.' },
+    ],
+  },
+  {
+    id: 'a2-final',
+    levelId: 'a2',
+    title: 'Elementary (A2) Final Exam',
+    description: 'Test your knowledge of verb conjugations, family, food, time, prepositions, negation, and partitive articles.',
+    passingScore: 70,
+    questions: [
+      { id: 'a2-f-q1', type: 'fill-blank', question: 'Nous ___ (parler) français.', correctAnswer: 'parlons', explanation: 'Nous parlons.' },
+      { id: 'a2-f-q2', type: 'fill-blank', question: 'Elle ___ (dormir).', correctAnswer: 'dort', explanation: 'Elle dort — type 2 -IR.' },
+      { id: 'a2-f-q3', type: 'multiple-choice', question: '"My friend" (amie, f):', options: ['ma amie', 'mon amie', 'mes amie', 'ton amie'], correctAnswer: 'mon amie', explanation: 'Mon before vowel feminine.' },
+      { id: 'a2-f-q4', type: 'translation', question: 'Write "I would like a coffee":', correctAnswer: 'Je voudrais un café', explanation: 'Je voudrais = polite request.' },
+      { id: 'a2-f-q5', type: 'fill-blank', question: 'Il est trois heures et ___. (half past)', correctAnswer: 'demie', explanation: 'Et demie = half past.' },
+      { id: 'a2-f-q6', type: 'fill-blank', question: 'Je vais ___ cinéma.', correctAnswer: 'au', explanation: 'à + le = au.' },
+      { id: 'a2-f-q7', type: 'fill-blank', question: 'Je ne mange ___ de viande. (never)', correctAnswer: 'jamais', explanation: 'Ne...jamais = never.' },
+      { id: 'a2-f-q8', type: 'fill-blank', question: 'Je voudrais ___ pain. (some)', correctAnswer: 'du', explanation: 'Partitive du.' },
+      { id: 'a2-f-q9', type: 'multiple-choice', question: 'Finir uses which -IR pattern?', options: ['Type 1 (-iss-)', 'Type 2 (dormir)', '-RE pattern', '-ER pattern'], correctAnswer: 'Type 1 (-iss-)', explanation: 'Finir = finiss- pattern.' },
+      { id: 'a2-f-q10', type: 'fill-blank', question: 'Beaucoup ___ gens', correctAnswer: 'de', explanation: 'After quantity: de not des.' },
+      { id: 'a2-f-q11', type: 'translation', question: 'Write "We are leaving" (partir):', correctAnswer: 'Nous partons', explanation: 'Nous partons.' },
+      { id: 'a2-f-q12', type: 'multiple-choice', question: 'L\'addition means:', options: ['The menu', 'The bill', 'The table', 'The tip'], correctAnswer: 'The bill', explanation: 'L\'addition = the check/bill.' },
+      { id: 'a2-f-q13', type: 'fill-blank', question: 'Je ne mange ___ des légumes. (only)', correctAnswer: 'que', explanation: 'Ne...que = only.' },
+      { id: 'a2-f-q14', type: 'multiple-choice', question: 'Correct negation:', options: ['Je ne parle pas', 'Je parle ne pas', 'Ne je parle pas', 'Je ne pas parle'], correctAnswer: 'Je ne parle pas', explanation: 'Ne + verb + pas.' },
+      { id: 'a2-f-q15', type: 'fill-blank', question: 'Ils ___ (vendre) leur voiture.', correctAnswer: 'vendent', explanation: 'Ils vendent.' },
+    ],
+  },
+  {
+    id: 'b1-final',
+    levelId: 'b1b2',
+    title: 'Intermediate (B1–B2) Final Exam',
+    description: 'Comprehensive test on past tenses, future, conditional, pronouns, subjunctive, comparatives, and relative pronouns.',
+    passingScore: 70,
+    questions: [
+      { id: 'b1-f-q1', type: 'fill-blank', question: 'Elle ___ (aller, pc) au marché.', correctAnswer: 'est allée', explanation: 'Être verb + agreement.' },
+      { id: 'b1-f-q2', type: 'fill-blank', question: 'Quand j\'___ (être, imp.) petit...', correctAnswer: 'étais', explanation: 'Imparfait j\'étais.' },
+      { id: 'b1-f-q3', type: 'fill-blank', question: 'Je ___ (aller, futur) demain.', correctAnswer: 'irai', explanation: 'Aller → j\'irai.' },
+      { id: 'b1-f-q4', type: 'fill-blank', question: 'Je ___ (vouloir, cond.) un thé.', correctAnswer: 'voudrais', explanation: 'Je voudrais.' },
+      { id: 'b1-f-q5', type: 'fill-blank', question: 'Je ___ vois. (le chat)', correctAnswer: 'le', explanation: 'Direct object le.' },
+      { id: 'b1-f-q6', type: 'fill-blank', question: 'Il faut que tu ___ (venir).', correctAnswer: 'viennes', explanation: 'Subjunctive viennes.' },
+      { id: 'b1-f-q7', type: 'fill-blank', question: 'Ce film est ___ (good, comp.) que l\'autre.', correctAnswer: 'meilleur', explanation: 'Bon → meilleur.' },
+      { id: 'b1-f-q8', type: 'fill-blank', question: 'L\'homme ___ parle est mon oncle.', correctAnswer: 'qui', explanation: 'Qui as subject.' },
+      { id: 'b1-f-q9', type: 'fill-blank', question: 'Tu en ___? (avoir, some)', correctAnswer: 'as', explanation: 'Tu en as?' },
+      { id: 'b1-f-q10', type: 'multiple-choice', question: 'Imparfait vs PC: habitual past uses:', options: ['passé composé', 'imparfait', 'future', 'present'], correctAnswer: 'imparfait', explanation: 'Habits = imparfait.' },
+      { id: 'b1-f-q11', type: 'fill-blank', question: 'Le livre ___ j\'ai lu est super.', correctAnswer: 'que', explanation: 'Que as direct object.' },
+      { id: 'b1-f-q12', type: 'translation', question: 'Write "She would go" (aller):', correctAnswer: 'Elle irait', explanation: 'Aller → ir- + ait.' },
+      { id: 'b1-f-q13', type: 'fill-blank', question: 'Je ___ parle. (à Pierre)', correctAnswer: 'lui', explanation: 'Indirect object lui.' },
+      { id: 'b1-f-q14', type: 'fill-blank', question: 'La ville ___ j\'habite.', correctAnswer: 'où', explanation: 'Où for place.' },
+      { id: 'b1-f-q15', type: 'multiple-choice', question: 'Past participle of faire:', options: ['fais', 'faisé', 'fait', 'faite'], correctAnswer: 'fait', explanation: 'Faire → fait.' },
+    ],
+  },
+  {
+    id: 'c1-final',
+    levelId: 'c1',
+    title: 'Advanced (C1) Final Exam',
+    description: 'Test advanced tenses, subjunctive mastery, passive voice, conditionals, idioms, and literary French.',
+    passingScore: 70,
+    questions: [
+      { id: 'c1-f-q1', type: 'fill-blank', question: 'J\'___ (finir, pqp) quand tu es arrivé.', correctAnswer: 'avais fini', explanation: 'Plus-que-parfait.' },
+      { id: 'c1-f-q2', type: 'fill-blank', question: 'Je doute qu\'il ___ (pouvoir).', correctAnswer: 'puisse', explanation: 'Subjunctive after doubt.' },
+      { id: 'c1-f-q3', type: 'translation', question: 'Passive: "The book is written by Hugo" (écrire):', correctAnswer: 'Le livre est écrit par Hugo', explanation: 'Passive voice.' },
+      { id: 'c1-f-q4', type: 'fill-blank', question: 'Si j\'avais su, je ___ (venir, cond. passé).', correctAnswer: 'serais venu', explanation: 'Si + pqp → cond. passé.' },
+      { id: 'c1-f-q5', type: 'multiple-choice', question: '"Avoir le cafard" means:', options: ['Have a pet', 'Feel depressed', 'Drink coffee', 'Be busy'], correctAnswer: 'Feel depressed', explanation: 'Idiom: feel blue.' },
+      { id: 'c1-f-q6', type: 'multiple-choice', question: 'Passé simple is used in:', options: ['Speech', 'Texting', 'Literature', 'Email'], correctAnswer: 'Literature', explanation: 'Literary tense.' },
+      { id: 'c1-f-q7', type: 'fill-blank', question: 'Je fais ___ (couper) les cheveux.', correctAnswer: 'couper', explanation: 'Causative faire + infinitive.' },
+      { id: 'c1-f-q8', type: 'multiple-choice', question: 'Si + imparfait → ?', options: ['Future', 'Conditional', 'Subjunctive', 'Imperative'], correctAnswer: 'Conditional', explanation: 'Type 2 si clause.' },
+      { id: 'c1-f-q9', type: 'multiple-choice', question: '"Poser un lapin" means:', options: ['Adopt rabbit', 'Stand someone up', 'Ask question', 'Tell joke'], correctAnswer: 'Stand someone up', explanation: 'Colloquial idiom.' },
+      { id: 'c1-f-q10', type: 'fill-blank', question: 'Il ___ (parler, passé simple).', correctAnswer: 'parla', explanation: 'Passé simple il parla.' },
+      { id: 'c1-f-q11', type: 'multiple-choice', question: 'Affirmative "Je pense que" takes:', options: ['Subjunctive', 'Indicative', 'Conditional', 'Imperative'], correctAnswer: 'Indicative', explanation: 'Affirmative opinion → indicative.' },
+      { id: 'c1-f-q12', type: 'fill-blank', question: 'Je suis content qu\'il ___ (réussir, passé subj.).', correctAnswer: 'ait réussi', explanation: 'Passé subjunctive.' },
+    ],
+  },
+];
+
+export function getFinalTestById(id: string): FinalTest | undefined {
+  return finalTests.find((t) => t.id === id);
+}
+
+export function getFinalTestByLevel(levelId: string): FinalTest | undefined {
+  return finalTests.find((t) => t.levelId === levelId);
+}
