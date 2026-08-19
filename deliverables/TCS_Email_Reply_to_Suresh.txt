@@ -1,0 +1,78 @@
+Subject: Re: TCS Canada - Details Required — Vishwa Gohil (EP2026IR7486956)
+
+Dear Suresh Cyril P,
+
+Thank you for reaching out regarding opportunities with TCS Canada. Please find my details below along with my updated resume (Word format, attached).
+
+Reference ID:             EP2026IR7486956
+Role OR Title of the Job:   [Your applied role title from iBegin portal]
+
+Full Name:                  Vishwa Gohil
+Last/Current Employer:      iMatr Canada Inc. (Level 1 Programmer)
+Current Location:           Vaughan, Ontario, Canada
+Contact No.:                (437) 989-5454
+E-mail ID:                  vishwagohil21@gmail.com
+
+Work Authorization:         [PGWP / PR / etc. — CONFIRM]
+Expiry Date (Month/Year):     [MM/YYYY — CONFIRM]
+
+Notice Period / Joining:    1 week notice | Available from August 26, 2026
+
+Planned leaves (next 3 mo): No
+
+Salary (CAD Yearly, base):  CAD 110,000
+Salary (CAD Hourly):        CAD 52.88
+
+Incorporation only:         No — seeking full-time employment
+
+Telephonic Availability:    Monday–Friday, 9:00 AM – 6:00 PM EST
+
+Primary Skillset:
+  1. PHP (OOP) / Laravel
+  2. JavaScript / jQuery / Ajax
+  3. React.js / Next.js / TypeScript
+  4. SQL (MySQL/PostgreSQL) / REST APIs
+  5. AWS (Cognito, RDS, SES, S3, EC2, CloudWatch, IAM, Lambda, API Gateway)
+  6. Azure / Terraform / Ansible
+  7. Git / GitHub / Agile-JIRA / Production Support
+
+Domain Expertise:           Logistics/Shipping, Telecom/Wireless, Cloud Web Applications
+
+Sub-domains:
+  • Civic/DemTech production apps (iMatr — PHP, SQL, on-call support)
+  • Logistics admin dashboards (Araw/SYS Oil — Next.js, Cognito, Supabase)
+  • EV fleet cloud admin (Volterra EVCare — AWS, Next.js)
+  • LTE/wireless RF testing (BLiNQ Networks capstone)
+  • E-commerce (ShopStyle — Laravel 10)
+
+COVID-19 Vaccinated:        [Yes/No — CONFIRM]
+
+Ex-TCS:                     No
+Family at TCS Canada:       No
+
+Total Experience:           1 year 10 months
+Relevant IT Experience:     1 year 10 months
+
+Career/Education Gaps:      No significant gaps. B.Sc. Physics (2022, India) → relocated to Canada → Humber graduate certificates (Wireless 2024, Cloud 2025) → software roles.
+
+Open for Relocation/Travel: Yes
+Location Preferences:       GTA (Vaughan, Toronto, Mississauga, Markham, Burlington); open anywhere in Canada
+
+Worked full-time before:    Yes — iMatr Canada Inc. (current full-time role)
+
+Graduation Completion:      2025 (Humber Cloud Computing); B.Sc. 2022
+
+LinkedIn:   https://www.linkedin.com/in/vishwa-gohil
+
+Please let me know if my profile is already under consideration for any TCS Canada roles.
+
+Thank you for your time. I look forward to hearing from you.
+
+Best Regards,
+Vishwa Gohil
+(437) 989-5454
+vishwagohil21@gmail.com
+
+Attachments:
+1. Vishwa_Gohil_Resume_TCS.docx
+2. Work permit (if applicable)
